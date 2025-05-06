@@ -58,7 +58,7 @@ require("./src/config/routeRegistry")(app);
 // Listen Server
 server.listen(config.app.port, '0.0.0.0', () => {
   console.log(
-    `### Server is running on port ${config.app.port} - ${process.env.NODE_ENV}`
+    `### Server is running on port ${config.app.port} - ${process.env.ENVIRONMENT}`
   );
 });
 

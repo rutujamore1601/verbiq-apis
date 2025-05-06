@@ -1,5 +1,5 @@
 require("dotenv").config();
-const environment = process.env.NODE_ENV;
+const environment = process.env.ENVIRONMENT;
 
 const development = {
   app: {

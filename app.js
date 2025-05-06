@@ -5,7 +5,6 @@ const config = require("./src/config/config");
 const http = require("http");
 const path = require("path");
 // const cors = require("cors");
-const sendEmail = require("./src/shared/utils/twillioEmail");
 const loggerToFile = require("./logs/log");
 const requestLogger = require("./src/shared/middleware/logMiddleware");
 const helmet = require("helmet");

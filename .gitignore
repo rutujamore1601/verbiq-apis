@@ -27,6 +27,7 @@ package-lock.json
 /tmp
 /out-tsc
 /bazel-out
+.env
 
 # Node
 /node_modules

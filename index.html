@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Results Approval Notification</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .header {
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .header img {
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .content p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0 0 20px;
+      }
+
+      .content strong {
+        color: #0066cc;
+      }
+
+      .button {
+        display: inline-block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 15px 25px;
+        text-align: center;
+        background-color: #0066cc;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #004999;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 14px;
+        color: #777;
+      }
+
+      .social-links {
+        margin: 20px 0;
+      }
+
+      .social-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #777;
+      }
+
+      .social-links img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .social-links img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://avatars.githubusercontent.com/u/125542434?s=400&u=e8f162415dbe533b339a29bd9f1150e6c16f3bc8&v=4"
+          alt="verbeq Logo"
+        />
+      </div>
+      <div class="content">
+        <p>Hello, <strong>${user.fullName}</strong></p>
+        <p>
+          We are pleased to inform you that your exam results have been
+          <strong>approved by Admin</strong>.
+        </p>
+        <p>Certification: <strong>${certification.certificateName}</strong></p>
+        <p>Exam Date: <strong>${studentCertifications.slotDate}</strong></p>
+        <p>
+          Time:
+          <strong
+            >${convertTo12Hour(await studentCertifications.slotTime)}</strong
+          >
+        </p>
+        <a href="Exam Details" class="button">View Exam Details</a>
+      </div>
+      <div class="footer">
+        <div class="social-links">
+          <a href="https://facebook.com/yourpage" target="_blank">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://twitter.com/yourpage" target="_blank">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+              alt="Twitter"
+            />
+          </a>
+          <a href="https://linkedin.com/yourpage" target="_blank">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
+              alt="LinkedIn"
+            />
+          </a>
+          <a href="https://instagram.com/yourpage" target="_blank">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+              alt="Instagram"
+            />
+          </a>
+        </div>
+        &copy; 2024 verbeq. All rights reserved.
+      </div>
+    </div>
+  </body>
+</html>
